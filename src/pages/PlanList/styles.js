@@ -7,6 +7,7 @@ export const Container = styled.div`
 `;
 
 export const ClientFilter = styled.div`
+  height: 100ch;
   position: absolute;
   right: 0;
   left: 0;
@@ -21,8 +22,6 @@ export const ClientFilter = styled.div`
 
 export const ContentFilter = styled.div`
   position: absolute;
-  width: 400px;
-  height: 600px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -31,14 +30,30 @@ export const ContentFilter = styled.div`
   z-index: 1000;
   border-radius: 3px;
   box-shadow: 0 0 7px ${shade(0.2, '#ff9000')};
+
+  @media (max-width: 320px) {
+    width: 300px;
+  }
+
+  @media (min-width: 321px) {
+    width: 310px;
+  }
+
+  @media (min-width: 375px) {
+    width: 364px;
+  }
+
+  @media (min-width: 425px) {
+    width: 400px;
+  }
 `;
 
-export const Title = styled.div`
+export const DivTitleFilter = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
 
-  h1 {
+  h2 {
     flex: 1;
     text-align: center;
     font-size: 2.4rem;
@@ -93,7 +108,6 @@ export const InputDiv = styled.div`
     select {
       width: 100%;
       height: 2.4rem;
-      font-size: 1.6rem;
       border: 0;
       background: transparent;
       color: #ff9000;
@@ -111,6 +125,48 @@ export const InputDiv = styled.div`
 
     label {
       width: 49%;
+    }
+  }
+
+  @media (max-width: 320px) {
+    label {
+      font-size: 1.4rem;
+    }
+
+    input {
+      font-size: 1.4rem;
+    }
+
+    select {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (min-width: 321px) {
+    label {
+      font-size: 1.5rem;
+    }
+
+    input {
+      font-size: 1.4rem;
+    }
+
+    select {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (min-width: 375px) {
+    label {
+      font-size: 1.6rem;
+    }
+
+    input {
+      font-size: 1.6rem;
+    }
+
+    select {
+      font-size: 1.6rem;
     }
   }
 `;
@@ -135,6 +191,7 @@ export const Content = styled.div`
   width: 100%;
   height: 620px;
   margin-top: 10rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -213,7 +270,6 @@ export const Table = styled.table`
   th {
     height: 5rem;
     color: ${shade(0, '#ff9000')};
-    font-size: 1.8rem;
     font-weight: 500;
   }
 
@@ -247,6 +303,91 @@ export const Table = styled.table`
 
     :hover {
       background: ${shade(0.4, '#ff9000')};
+    }
+  }
+
+  @media (max-width: 320px) {
+    th {
+      font-size: 0.9rem;
+    }
+
+    td {
+      font-size: 0.8rem;
+
+      button {
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 321px) {
+    th {
+      font-size: 1.1rem;
+    }
+
+    td {
+      font-size: 0.9rem;
+
+      button {
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 401px) {
+    th {
+      font-size: 1.3rem;
+    }
+
+    td {
+      font-size: 1.1rem;
+
+      button {
+        svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 501px) {
+    th {
+      font-size: 1.5rem;
+    }
+
+    td {
+      font-size: 1.3rem;
+
+      button {
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 601px) {
+    th {
+      font-size: 1.8rem;
+    }
+
+    td {
+      font-size: 1.6rem;
+
+      button {
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
   }
 `;
