@@ -9,7 +9,7 @@ import {
   Container,
   ClientFilter,
   ContentFilter,
-  Title,
+  DivTitleFilter,
   Body,
   InputDiv,
   Button,
@@ -99,12 +99,12 @@ const ClientList = () => {
     <Container>
       <ClientFilter id="clientFilter">
         <ContentFilter>
-          <Title>
-            <h1>Filtro</h1>
+          <DivTitleFilter>
+            <h2>Filtro</h2>
             <button type="button" onClick={handleButtonClose}>
               <FiX size={30} />
             </button>
-          </Title>
+          </DivTitleFilter>
 
           <Body>
             <InputDiv id="SelectDiv">
