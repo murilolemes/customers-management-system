@@ -332,41 +332,61 @@ export const servers = [
   {
     id: 0,
     server: 'Servidor 1',
+    credits: 517,
+    status: 'Ativo',
   },
   {
     id: 1,
     server: 'Servidor 2',
+    credits: 0,
+    status: 'Inativo',
   },
   {
     id: 2,
     server: 'Servidor 3',
+    credits: 356,
+    status: 'Ativo',
   },
   {
     id: 3,
     server: 'Servidor 4',
+    credits: 485,
+    status: 'Ativo',
   },
   {
     id: 4,
     server: 'Servidor 5',
+    credits: 0,
+    status: 'Inativo',
   },
   {
     id: 5,
     server: 'Servidor 6',
+    credits: 0,
+    status: 'Inativo',
   },
   {
     id: 6,
     server: 'Servidor 7',
+    credits: 210,
+    status: 'Ativo',
   },
   {
     id: 7,
     server: 'Servidor 8',
+    credits: 127,
+    status: 'Ativo',
   },
   {
     id: 8,
     server: 'Servidor 9',
+    credits: 55,
+    status: 'Ativo',
   },
   {
     id: 9,
     server: 'Servidor 10',
+    credits: 0,
+    status: 'Inativo',
   },
 ];

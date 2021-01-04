@@ -2,38 +2,9 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { shade } from 'polished';
 
-import { Container } from './styles';
+import { users, servers } from '../../services/server';
 
-const listServers = [
-  {
-    server: 'Server 1',
-    qtd: 517,
-  },
-  {
-    server: 'Server 2',
-    qtd: 833,
-  },
-  {
-    server: 'Server 3',
-    qtd: 478,
-  },
-  {
-    server: 'Server 4',
-    qtd: 654,
-  },
-  {
-    server: 'Server 5',
-    qtd: 159,
-  },
-  {
-    server: 'Server 6',
-    qtd: 957,
-  },
-  {
-    server: 'Server 7',
-    qtd: 777,
-  },
-];
+import { Container } from './styles';
 
 const listPlans = [
   {
@@ -80,11 +51,11 @@ const listPlans = [
 
 export const GraphicsServers = () => {
   const data = {
-    labels: listServers.map((servers) => servers.server),
+    labels: servers.map((server) => server.server),
     datasets: [
       {
         label: 'Crédito disponível por servidor',
-        data: listServers.map((servers) => servers.qtd),
+        data: servers.map((server) => server.credits),
         backgroundColor: shade(0.2, '#ff9000'),
         hoverBackgroundColor: '#ff9000',
       },
@@ -104,12 +75,18 @@ export const GraphicsServers = () => {
 };
 
 export const GraphicsClient = () => {
+  const ups = servers.map(
+    (s) => users.filter((u) => u.server === s.server).length,
+  );
+
+  const usersPerServer = ups;
+
   const data = {
-    labels: listServers.map((servers) => servers.server),
+    labels: servers.map((server) => server.server),
     datasets: [
       {
         label: 'Clientes ativos por servidor',
-        data: listServers.map((servers) => servers.qtd),
+        data: usersPerServer,
         backgroundColor: shade(0.2, '#ff9000'),
         hoverBackgroundColor: '#ff9000',
       },
