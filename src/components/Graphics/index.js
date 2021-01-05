@@ -50,12 +50,14 @@ const listPlans = [
 ];
 
 export const GraphicsServers = () => {
+  const sv = servers.filter((s) => s.status === 'Ativo');
+
   const data = {
-    labels: servers.map((server) => server.server),
+    labels: sv.map((server) => server.server),
     datasets: [
       {
         label: 'Crédito disponível por servidor',
-        data: servers.map((server) => server.credits),
+        data: sv.map((server) => server.credits),
         backgroundColor: shade(0.2, '#ff9000'),
         hoverBackgroundColor: '#ff9000',
       },
@@ -75,18 +77,15 @@ export const GraphicsServers = () => {
 };
 
 export const GraphicsClient = () => {
-  const ups = servers.map(
-    (s) => users.filter((u) => u.server === s.server).length,
-  );
-
-  const usersPerServer = ups;
+  const sv = servers.filter((s) => s.status === 'Ativo');
+  const us = users.filter((u) => u.status === 'Ativo');
 
   const data = {
-    labels: servers.map((server) => server.server),
+    labels: sv.map((server) => server.server),
     datasets: [
       {
         label: 'Clientes ativos por servidor',
-        data: usersPerServer,
+        data: sv.map((s) => us.filter((u) => u.server === s.server).length),
         backgroundColor: shade(0.2, '#ff9000'),
         hoverBackgroundColor: '#ff9000',
       },
