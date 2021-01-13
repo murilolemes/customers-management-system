@@ -145,7 +145,7 @@ export const DivButtons = styled.div`
   #submit {
     width: 100px;
     height: 4.7rem;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     border-radius: 5px;
     border: none;
     background: #ff9000;
