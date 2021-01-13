@@ -160,11 +160,11 @@ const Header = () => {
               <FiUserPlus />
               Cadastrar Clientes
             </Link>
-            <Link to="/dashboard">
+            <Link to="/registerServers">
               <FiServer />
               Cadastrar Servidores
             </Link>
-            <Link to="/dashboard">
+            <Link to="/registerPlans">
               <FiPlusSquare />
               Cadastrar Planos
             </Link>

@@ -8,6 +8,8 @@ import ClientList from '../pages/ClientList';
 import ServerList from '../pages/ServerList';
 import PlanList from '../pages/PlanList';
 import RegisterCustomers from '../pages/RegisterCustomers';
+import RegisterServers from '../pages/RegisterServers';
+import RegisterPlans from '../pages/RegisterPlans';
 
 const Routes = () => (
   <Switch>
@@ -18,6 +20,8 @@ const Routes = () => (
     <Route path="/serversList" component={ServerList} />
     <Route path="/plansList" component={PlanList} />
     <Route path="/registerCustomers" component={RegisterCustomers} />
+    <Route path="/registerServers" component={RegisterServers} />
+    <Route path="/registerPlans" component={RegisterPlans} />
   </Switch>
 );
 
